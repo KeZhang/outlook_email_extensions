@@ -1,12 +1,19 @@
 {
   "name": "outlook-email-alert",
   "description": "Send notification when you have open the outlook.office.com and new email arrived.",
-  "version": "0.1",
+  "version": "0.2",
   "permissions": [
     "tabs",
     "http://*/*",
     "https://*/*"
   ],
+  "browser_action": {
+    "default_title": "outlook-email-alert",
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
   "content_scripts": [
     {
       "matches": [
