@@ -1,0 +1,22 @@
+{
+  "name": "outlook-email-alert",
+  "description": "Send notification when you have open the outlook.office.com and new email arrived.",
+  "version": "0.1",
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://outlook.office.com/*"
+      ],
+      "js": [
+        "zepto.min.js",
+        "content_script.js"
+      ]
+    }
+  ],
+  "manifest_version": 2
+}
