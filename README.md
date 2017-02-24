@@ -1,6 +1,9 @@
 # outlook_email_extensions
-check "outlook.office.com" new email in real time
+check "outlook.office.com/outlook.office365.com" new email in real time (30seconds)
+
+#chrome Webstore link
+
+https://chrome.google.com/webstore/detail/outlook-email-alert/mldilncomkhjdgbkifcnfgbabkafpjon
 
 #TODO
-* Show the new email count on the bookmark bar
 * Open the outlook.office.com when click the extension icon
