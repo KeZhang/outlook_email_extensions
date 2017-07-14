@@ -4,10 +4,10 @@ function sendNotification(msg, count) {
   else {
     msg && new Notification(msg + '  ' + new Date());
   }
-  chrome.runtime && chrome.runtime.sendMessage({"count": count});
+  chrome.runtime && chrome.runtime.sendMessage({ "count": count });
 }
 
-setInterval(function() {
+setInterval(function () {
 
   var inbox = $('[title="Inbox"] + div')[0];
   var newCount = parseInt($(inbox).text());
@@ -18,3 +18,8 @@ setInterval(function() {
   }
 
 }, 30 * 1000)
+
+//auto logout after 10 hours
+setTimeout(function () {
+  $('#O365_SubLink_ShellSignout').click();
+}, 8 * 60 * 60 * 1000)
