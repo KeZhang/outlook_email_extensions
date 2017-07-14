@@ -1,9 +1,13 @@
+var myNotification;
+
 function sendNotification(msg, count) {
-  if (Notification.permission !== "granted")
+  if (Notification.permission !== "granted") {
     Notification.requestPermission();
-  else {
-    msg && new Notification(msg + '  ' + new Date());
   }
+  
+  myNotification && myNotification.close()
+  msg && (myNotification = new Notification(msg + '  ' + new Date()));
+  
   chrome.runtime && chrome.runtime.sendMessage({ "count": count });
 }
 
@@ -23,3 +27,5 @@ setInterval(function () {
 setTimeout(function () {
   $('#O365_SubLink_ShellSignout').click();
 }, 8 * 60 * 60 * 1000)
+
+// sendNotification('test', 0)
