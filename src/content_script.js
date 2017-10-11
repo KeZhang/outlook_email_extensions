@@ -25,7 +25,9 @@ setInterval(function () {
 
 //auto logout after 10 hours
 setTimeout(function () {
-  $('#O365_SubLink_ShellSignout').click();
+  //leave the email page
+  window.location.href="about:blank";
+  //$('#O365_SubLink_ShellSignout').click();
 }, 8 * 60 * 60 * 1000)
 
 // sendNotification('test', 0)

@@ -1,7 +1,7 @@
 {
   "name": "outlook-email-alert",
   "description": "Send notification when you have open the outlook.office.com and new email arrived.",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "permissions": [
     "tabs",
     "http://*/*",
